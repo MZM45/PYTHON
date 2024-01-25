@@ -1,0 +1,43 @@
+class Computer:
+    def __init__(self):
+        self.name = ""
+        self.type = ""
+        self.processor = ""
+        self.ram = 0
+        self.hdd = 0
+        self.motherboard = ""
+        self.optical_drive = ""
+
+    def get_info(self):
+        self.name = input("Enter computer name: ")
+        self.type = input("Enter computer type: ")
+        self.processor = input("Enter processor: ")
+        self.ram = int(input("Enter RAM size (in GB): "))
+        self.hdd = int(input("Enter HDD size (in GB): "))
+        self.motherboard = input("Enter motherboard specification: ")
+        self.optical_drive = input("Enter optical drive type: ")
+
+    def display_info(self):
+        print("Computer name:", self.name)
+        print("Computer type:", self.type)
+        print("Processor specification:", self.processor)
+        print("RAM size:", self.ram, "GB")
+        print("HDD size:", self.hdd, "GB")
+        print("Motherboard specification:", self.motherboard)
+        print("Optical drive type:", self.optical_drive)
+
+if __name__ == "__main__":
+    computer = Computer()
+    computer.get_info()
+    computer.display_info()
+
+    response = input("Do you want to change any information? (Y/N) ")
+    if response.upper() == "Y":
+        field = input("Enter field to change (name, type, processor, ram, hdd, motherboard, optical drive): ")
+        field = field.lower()
+        if field in ["name", "type", "processor", "ram", "hdd", "motherboard", "optical drive"]:
+            new_value = input(f"Enter new {field}: ")
+            setattr(computer, field, new_value)
+            computer.display_info()
+        else:
+            print("Invalid field entered.")
