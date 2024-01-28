@@ -1,0 +1,13 @@
+def factorial(a):
+    prod = 1
+    for i in range(a, 0, -1):
+        prod *= i
+    return prod
+
+def main():
+    num = int(input("ENTER A NUMBER YOU WANT TO FIND A FACTORIAL OF: "))
+    print()
+    print("FACTORIAL OF", num, "IS:", factorial(num))
+
+if __name__ == "__main__":
+    main()
