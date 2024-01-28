@@ -1,0 +1,20 @@
+def main():
+    a = input("\nEnter String A of at least 6 characters: ")
+    while len(a) < 6:
+        print("String A must have at least 6 characters.")
+        a = input("Enter String A again: ")
+
+    b = input("\nEnter String B of at least 6 characters: ")
+    while len(b) < 6:
+        print("String B must have at least 6 characters.")
+        b = input("Enter String B again: ")
+
+    temp = a
+    a = b
+    b = temp
+
+    print("\nString A is now:", a)
+    print("String B is now:", b)
+
+if __name__ == "__main__":
+    main()
