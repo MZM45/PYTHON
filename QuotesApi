@@ -1,0 +1,15 @@
+import requests
+
+url = "https://quotes15.p.rapidapi.com/quotes/random/"
+
+headers = {
+    "X-RapidAPI-Key": "187b9c36d7msh47f8af9f0aa994dp1efc51jsn01a8dd57be9c",
+    "X-RapidAPI-Host": "quotes15.p.rapidapi.com"
+}
+
+response = requests.get(url, headers=headers)
+response_data = response.json()
+
+
+print(response_data['originator']['name'])
+print(response_data['content'])
