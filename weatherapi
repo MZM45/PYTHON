@@ -1,0 +1,18 @@
+import requests
+api_key="48965f893adb6ff2c6cd727e638cb660"
+
+
+user_input=input("Enter City:")
+
+weather_data= requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={user_input}&units=imperial&APPID={api_key}")
+
+if(weather_data.status_code == 200):
+    print("Connection Established!!")
+
+# print(weather_data.json())
+weather = weather_data.json()['weather'][0]['main']
+temp = round(weather_data.json()['main']['temp'])
+celsius=(temp- 32) * 5/9
+
+print("Weather is:",weather)
+print("Temperature is:",celsius)
