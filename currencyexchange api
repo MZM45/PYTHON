@@ -1,0 +1,12 @@
+import requests
+
+url = "https://currency-exchange.p.rapidapi.com/listquotes"
+
+headers = {
+	"X-RapidAPI-Key": "187b9c36d7msh47f8af9f0aa994dp1efc51jsn01a8dd57be9c",
+	"X-RapidAPI-Host": "currency-exchange.p.rapidapi.com"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.json())
