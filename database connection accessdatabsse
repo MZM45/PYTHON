@@ -1,0 +1,32 @@
+import pyodbc
+name=""
+age=0
+
+print("Enter Name:")
+name=input()
+print("Enter Age:")
+age=input()
+
+conn = pyodbc.connect(
+    r"Driver={Microsoft Access Driver (*.mdb, *.accdb)};"
+    r"DBQ=C:\Users\extre\OneDrive\Desktop\database.accdb;"  # Replace this with your actual database path
+)
+
+# Create a cursor to execute SQL commands
+cursor = conn.cursor()
+
+# Define SQL command to insert data into the table
+sql_command = "INSERT INTO information (Name, Age) VALUES (?, ?)"
+
+# Execute SQL command with the provided data
+try:
+    cursor.execute(sql_command, (name, age))
+    conn.commit()  # Commit the transaction
+    print("Data saved successfully.")
+except Exception as e:
+    print("Error occurred:", e)
+    conn.rollback()  # Rollback in case of an error
+
+# Close cursor and connection
+cursor.close()
+conn.close()
