@@ -1,0 +1,22 @@
+from functools import reduce
+
+# Define a list of numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Define a lambda function to filter even numbers
+filter_even = lambda x: x % 2 == 0
+
+# Use filter() to filter even numbers from the list
+even_numbers = list(filter(filter_even, numbers))
+print("Even numbers:", even_numbers)
+
+# Define a lambda function to double numbers
+double_number = lambda x: x * 2
+
+# Use map() to double each number in the list
+doubled_numbers = list(map(double_number, numbers))
+print("Doubled numbers:", doubled_numbers)
+
+# Use reduce() to find the sum of all numbers in the list
+sum_of_numbers = reduce(lambda x, y: x + y, numbers)
+print("Sum of numbers:", sum_of_numbers)
