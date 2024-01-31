@@ -1,0 +1,13 @@
+import asyncio
+
+async def print_numbers():
+    for i in range(20):
+        print(f"Number: {i}")
+        await asyncio.sleep(1)  # Pause execution for 1 second
+
+# Run the coroutines concurrently
+async def main():
+    await asyncio.gather(print_numbers(), print_numbers(), print_numbers(), print_numbers(), print_numbers())
+
+# Run the event loop
+asyncio.run(main())
