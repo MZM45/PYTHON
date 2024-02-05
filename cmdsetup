@@ -1,0 +1,69 @@
+Microsoft Windows [Version 10.0.22631.3007]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\extre>py -m venv myworld
+
+C:\Users\extre>myworld\Scripts\activate.bat
+
+(myworld) C:\Users\extre>>py -m pip install Django
+'-m' is not recognized as an internal or external command,
+operable program or batch file.
+
+(myworld) C:\Users\extre>>py -m pip install Django
+'-m' is not recognized as an internal or external command,
+operable program or batch file.
+
+(myworld) C:\Users\extre>py --version
+Python 3.12.0
+
+(myworld) C:\Users\extre>>django-admin --version
+'--version' is not recognized as an internal or external command,
+operable program or batch file.
+
+(myworld) C:\Users\extre>py -m pip install Django
+Collecting Django
+  Obtaining dependency information for Django from https://files.pythonhosted.org/packages/97/67/6804ff6fc4fa6df188924412601cc418ddc2d0a500963b0801a97b7ec08a/Django-5.0.1-py3-none-any.whl.metadata
+  Using cached Django-5.0.1-py3-none-any.whl.metadata (4.2 kB)
+Collecting asgiref<4,>=3.7.0 (from Django)
+  Obtaining dependency information for asgiref<4,>=3.7.0 from https://files.pythonhosted.org/packages/9b/80/b9051a4a07ad231558fcd8ffc89232711b4e618c15cb7a392a17384bbeef/asgiref-3.7.2-py3-none-any.whl.metadata
+  Using cached asgiref-3.7.2-py3-none-any.whl.metadata (9.2 kB)
+Collecting sqlparse>=0.3.1 (from Django)
+  Using cached sqlparse-0.4.4-py3-none-any.whl (41 kB)
+Collecting tzdata (from Django)
+  Obtaining dependency information for tzdata from https://files.pythonhosted.org/packages/a3/fb/52b62131e21b24ee297e4e95ed41eba29647dad0e0051a92bb66b43c70ff/tzdata-2023.4-py2.py3-none-any.whl.metadata
+  Using cached tzdata-2023.4-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached Django-5.0.1-py3-none-any.whl (8.1 MB)
+Using cached asgiref-3.7.2-py3-none-any.whl (24 kB)
+Using cached tzdata-2023.4-py2.py3-none-any.whl (346 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, Django
+Successfully installed Django-5.0.1 asgiref-3.7.2 sqlparse-0.4.4 tzdata-2023.4
+
+[notice] A new release of pip is available: 23.2.1 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(myworld) C:\Users\extre>python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\extre\myworld\lib\site-packages (23.2.1)
+Collecting pip
+  Obtaining dependency information for pip from https://files.pythonhosted.org/packages/8a/6a/19e9fe04fca059ccf770861c7d5721ab4c2aebc539889e97c7977528a53b/pip-24.0-py3-none-any.whl.metadata
+  Downloading pip-24.0-py3-none-any.whl.metadata (3.6 kB)
+Downloading pip-24.0-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 2.4 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.2.1
+    Uninstalling pip-23.2.1:
+      Successfully uninstalled pip-23.2.1
+Successfully installed pip-24.0
+
+(myworld) C:\Users\extre>py --version
+Python 3.12.0
+
+(myworld) C:\Users\extre>django-admin --version
+5.0.1
+
+(myworld) C:\Users\extre>django-admin startproject my_tennis_club
+
+(myworld) C:\Users\extre>py manage.py runserver
+C:\Users\extre\AppData\Local\Programs\Python\Python312\python.exe: can't open file 'C:\\Users\\extre\\manage.py': [Errno 2] No such file or directory
+
+(myworld) C:\Users\extre>
