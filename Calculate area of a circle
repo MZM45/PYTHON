@@ -1,0 +1,7 @@
+Calculate area of a circle
+from math import pi
+print("Area Calculator")
+
+r = float(input("Enter R"))
+
+print(pi * r **2)
